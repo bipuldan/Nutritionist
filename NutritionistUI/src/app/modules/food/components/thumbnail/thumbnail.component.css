@@ -1,0 +1,23 @@
+.food-thumbnail {
+  width: 300px;
+  margin: 10px;
+}
+
+.food-overview {
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.food-overview::-webkit-scrollbar {
+  width: 2px;
+  background: rgb(190, 176, 176);
+}
+
+.food-actions{
+  text-align: right;
+
+}
+.food-button {
+  font-size: 10px;
+}

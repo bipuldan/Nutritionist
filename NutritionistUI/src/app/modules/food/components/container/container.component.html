@@ -1,0 +1,5 @@
+<div class="food-container">
+  <food-thumbnail *ngFor="let food of foods" [food]="food" [useFavouritelistApi]="useFavouritelistApi"
+    (addFood)="addToFavouritelist($event)" (deleteFood)="deleteFoodFromFavouritelist($event)"
+    (getNutrients)="getNutritionValue($event)"></food-thumbnail>
+</div>

@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span>Food Nutritions</span>
+  <button mat-button id="favouriteList" *ngIf="!authService.isTokenExpired()" [routerLink]="['foods/favouriteList']">My Favourite Foods</button>
+  <button class="search-button" *ngIf="!authService.isTokenExpired()" mat-button [routerLink]="['foods/foodSearch']">Food Search</button>
+  <button mat-button id="finallyLogout" *ngIf="!authService.isTokenExpired()" (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

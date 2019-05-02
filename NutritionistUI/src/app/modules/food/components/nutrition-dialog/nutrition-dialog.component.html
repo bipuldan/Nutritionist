@@ -1,0 +1,29 @@
+<h1 mat-title align="center">Nutrition Values</h1>
+<div align="center">
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Value Column -->
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef> Value </th>
+      <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+    </ng-container>
+  
+    <!-- Unit Column -->
+    <ng-container matColumnDef="unit">
+      <th mat-header-cell *matHeaderCellDef> Unit </th>
+      <td mat-cell *matCellDef="let element"> {{element.unit}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div><br>
+  <div align="center">
+<button id="foodReportViewed" mat-raised-button mat-button (click)="goBack()" class="food-button" color="accent" > OK </button>
+</div>

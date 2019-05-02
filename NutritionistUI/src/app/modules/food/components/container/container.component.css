@@ -1,0 +1,14 @@
+:host {
+  height: 100vh;
+}
+
+.food-container {
+  margin: auto;
+  margin-left: 10vw;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
+  overflow-x: auto;
+}
+

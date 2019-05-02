@@ -1,0 +1,14 @@
+<mat-card class="food-thumbnail">
+  <mat-card-header>
+    <mat-card-title class="foodName food-overview">{{food?.name}}</mat-card-title>
+    <mat-card-subtitle class="food-overview">Manufecturer: {{food.manu}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions class="food-actions" >
+    <button id="foodReport" mat-raised-button mat-button (click)="getNutrientValues()" class="food-button" color="accent" >Nutrtion Content</button>
+    <button id="addButton" mat-raised-button *ngIf="!useFavouritelistApi" mat-button (click)="addToFavouritelist()" class="food-button" color="primary" >Add To Favouritelist</button>
+    <button id="deleteFood" mat-raised-button *ngIf="useFavouritelistApi" mat-button (click)="deleteFromFavouritelist()" class="food-button" color="warn" >Delete</button>
+    <button mat-raised-button *ngIf="useFavouritelistApi" mat-button (click)="updateFavouritelist('updateComments')" class="food-button" color="primary" align="end" >Review</button>
+  </mat-card-actions>
+</mat-card>
+
+

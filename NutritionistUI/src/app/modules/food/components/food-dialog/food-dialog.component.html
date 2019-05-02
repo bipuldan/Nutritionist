@@ -1,0 +1,12 @@
+<span>Update the comments for the Food {{data.obj.name}}</span>
+<h4 mat-dialog-title>{{data.obj.name}}</h4>
+<div mat-dialog-content>
+  <p>Comment</p>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="comments"></textarea>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button color="warn" (click)="onNoClick()">Cancel</button>
+    <button mat-button color="warn" (click)="updateComments()">Update</button>
+  </div>
+</div>
